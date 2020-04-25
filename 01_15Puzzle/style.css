@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.tile {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 36px;
+  background-color: #fff;
+  -webkit-box-shadow: gray 5px 5px;
+          box-shadow: gray 5px 5px;
+}
+/*# sourceMappingURL=style.css.map */
