@@ -1,3 +1,7 @@
+#table {
+  margin: 200px auto;
+}
+
 .tile {
   width: 70px;
   height: 70px;
@@ -8,5 +12,6 @@
   background-color: #fff;
   -webkit-box-shadow: gray 5px 5px;
           box-shadow: gray 5px 5px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

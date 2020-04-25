@@ -1,3 +1,7 @@
+#table {
+  margin: 200px auto;
+}
+
 .tile {
   width: 70px;
   height: 70px;
@@ -7,4 +11,5 @@
   font-size: 36px;
   background-color: #fff;
   box-shadow: rgb(128, 128, 128)5px 5px;
+  cursor: pointer;
 }
