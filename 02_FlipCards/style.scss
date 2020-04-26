@@ -1,3 +1,9 @@
+table {
+  margin: 50px auto 0;
+}
+h2 {
+  text-align: center;
+}
 td{
   &.card {
     width: 100px;
@@ -12,5 +18,22 @@ td{
   &.back {
     background-image: url(card.png);
     background-size: 100px 140px;
+  }
+}
+#start {
+  display: block;
+	width: 100px;
+	padding: 0.8em;
+	text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+	color: rgb(91, 197, 230);
+	border: 2px solid rgb(91, 197, 230);
+	border-radius: 10px;
+  transition: .4s;
+  margin: 0 auto;
+  &:hover {
+    background: rgb(91, 197, 230);
+    color: #fff;
   }
 }

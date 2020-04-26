@@ -13,10 +13,11 @@ Array.prototype.shuffle = function(){
 }
 
 // 広域変数
-let timer = NaN, score = 0, flipTimer,prevCard,startTime;
+let timer = NaN, score = 0, flipTimer,prevCard,startTime,btn = document.querySelector("#start");
 
 // 初期化関数（カードの描画とタイマーの初期化）
 function init(){
+  btn.parentNode.removeChild(btn);
   let table = document.querySelector("#table");
   let cards = [];
   for (let i = 1; i <= 10; i++) {
@@ -47,4 +48,43 @@ function tick(){
   document.querySelector("#time").textContent = elapsed;
 }
 
+// カードの裏返し
+function flip(e) {
+  let src = e.srcElement;
+  if(flipTimer || src.textContent != "") {
+    return;
+  }
 
+  let num = src.number;
+  src.className = "card";
+  src.textContent = num;
+
+  // 1枚目
+  if(prevCard == null) {
+    prevCard = src;
+    return;
+  }
+
+  // 2枚目
+  if(prevCard.number == num) {
+    if(++score == 10) {
+      clearInterval(timer);
+    }
+    prevCard = null;
+    clearTimeout(flipTimer);
+  } else {
+    flipTimer = setTimeout(function(){
+      src.className = "card back";
+      src.textContent = "";
+      prevCard.className = "card back";
+      prevCard.textContent = "";
+      prevCard = null;
+      flipTimer = NaN;
+    }, 1000);
+  }
+}
+
+btn.addEventListener("click", init);
+
+
+// init();
