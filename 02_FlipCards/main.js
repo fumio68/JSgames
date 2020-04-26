@@ -15,7 +15,7 @@ Array.prototype.shuffle = function(){
 // 広域変数
 let timer = NaN, score = 0, flipTimer,prevCard,startTime;
 
-// 初期化関数
+// 初期化関数（カードの描画とタイマーの初期化）
 function init(){
   let table = document.querySelector("#table");
   let cards = [];
@@ -39,3 +39,12 @@ function init(){
   startTime = new Date();
   timer = setInterval(tick, 1000);
 }
+
+// 経過時間計測用タイマー
+function tick(){
+  let now = new Date();
+  let elapsed = Math.floor((now.getTime() - startTime.getTime())/ 1000);
+  document.querySelector("#time").textContent = elapsed;
+}
+
+
