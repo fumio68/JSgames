@@ -1,0 +1,17 @@
+td.card {
+  width: 100px;
+  height: 140px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 36px;
+  background-color: white;
+  -webkit-box-shadow: gray 5px 5px;
+          box-shadow: gray 5px 5px;
+}
+
+td.back {
+  background-image: url(card.png);
+  background-size: 100px 140px;
+}
+/*# sourceMappingURL=style.css.map */
